@@ -9,8 +9,8 @@ thesis/wasp/contracts/wasm/circularity_artifact/src/circularity_artifact.rs
 thesis/wasp/contracts/wasm/circularity_artifact/test/circularity_artifact_test.go  
   
 
-The Iota Schema Tool supported the development of the artifact. Further information regarding the Schema Tool can be found under https://wiki.iota.org/smart-contracts/guide/schema/usage  
-More information provided regarding the 
+The Iota Schema Tool supported the development of the artifact. Further information regarding the Schema Tool can be found under  https://wiki.iota.org/smart-contracts/guide/schema/usage  
+More information provided regarding the Iota node and smart contracts can be found here:  https://wiki.iota.org/smart-contracts/guide/chains_and_nodes/running-a-node
 
 ## Artifact deployment:
 ### Requirements:
