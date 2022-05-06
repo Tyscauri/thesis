@@ -15,10 +15,11 @@ The Iota Schema Tool supported the development of the artifact. Further informat
 
 ## Artifact deployment:
 ### Requirements:
-Go 1.16
-RocksDB
-Linux Ubuntu (used Ubuntu 20.04.4 LTS, 64-bit)
+- Go 1.16
+- RocksDB
+- Linux Ubuntu (used Ubuntu 20.04.4 LTS, 64-bit)
 
+### Steps to deploy the artifact and run the testcases
 - Clone the repository
 - Move to thesis/wasp directory in the terminal
 - "make install" (not tested)
