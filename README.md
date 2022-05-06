@@ -1,5 +1,5 @@
 # Thesis
-This is the permanent repository for the masterthesis "How Distributed Ledger Technology Facilitates The Establishment Of A Circular Economy"
+This is the permanent repository corresponding to the masterthesis "How Distributed Ledger Technology Facilitates the Establishment of a Circular Economy"
 
 ## Scope:
 Most of the repository contains required software from the Iota repository https://github.com/iotaledger/wasp - "develop" branch  
