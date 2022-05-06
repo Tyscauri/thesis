@@ -1,17 +1,17 @@
-# thesis
-Permanent repository for the masterthesis "How Distributed Ledger Technology Facilitates The Establishment Of A Circular Economy"
+# Thesis
+This is the permanent repository for the masterthesis "How Distributed Ledger Technology Facilitates The Establishment Of A Circular Economy"
 
 ## Scope:
-Most of the repository contains required software from the Iota repository https://github.com/iotaledger/wasp - "develop" branch
-My own work consists of 
-thesis/wasp/contracts/wasm/circularity_artifact/schema.yaml
-thesis/wasp/contracts/wasm/circularity_artifact/src/circularity_artifact.rs
-thesis/wasp/contracts/wasm/circularity_artifact/test/circularity_artifact_test.go
+Most of the repository contains required software from the Iota repository https://github.com/iotaledger/wasp - "develop" branch  
+My own work consists of  
+thesis/wasp/contracts/wasm/circularity_artifact/schema.yaml  
+thesis/wasp/contracts/wasm/circularity_artifact/src/circularity_artifact.rs  
+thesis/wasp/contracts/wasm/circularity_artifact/test/circularity_artifact_test.go  
+  
+compiling to the files  
+thesis/wasp/contracts/wasm/circularity_artifact/pkg  
 
-compiling to the files
-thesis/wasp/contracts/wasm/circularity_artifact/pkg
-
-The Iota Schema Tool supported the development of the artifact. Further information regarding the schema tool could be found under https://wiki.iota.org/smart-contracts/guide/schema/usage
+The Iota Schema Tool supported the development of the artifact. Further information regarding the schema tool can be found under https://wiki.iota.org/smart-contracts/guide/schema/usage  
 
 ## Artifact deployment:
 ### Requirements:
