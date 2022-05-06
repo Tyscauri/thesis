@@ -8,10 +8,9 @@ thesis/wasp/contracts/wasm/circularity_artifact/schema.yaml
 thesis/wasp/contracts/wasm/circularity_artifact/src/circularity_artifact.rs  
 thesis/wasp/contracts/wasm/circularity_artifact/test/circularity_artifact_test.go  
   
-compiling to the files  
-thesis/wasp/contracts/wasm/circularity_artifact/pkg  
 
-The Iota Schema Tool supported the development of the artifact. Further information regarding the schema tool can be found under https://wiki.iota.org/smart-contracts/guide/schema/usage  
+The Iota Schema Tool supported the development of the artifact. Further information regarding the Schema Tool can be found under https://wiki.iota.org/smart-contracts/guide/schema/usage  
+More information provided regarding the 
 
 ## Artifact deployment:
 ### Requirements:
@@ -21,8 +20,15 @@ The Iota Schema Tool supported the development of the artifact. Further informat
 
 ### Steps to deploy the artifact and run the testcases
 - Clone the repository
-- Move to thesis/wasp directory in the terminal
+- Move to the directory in the terminal under thesis/wasp
 - "make install" (not tested)
 - add wasp-cli, wasp and schema to the PATH variable
-- move to the test folder directory in the terminal
+- move to the test folder directory in the terminal under thesis/wasp/contracts/wasm/circularity_artifact/test/
 - "go test" runs the test cases on the local machine
+
+For recompiling
+- move to thesis/wasp/contracts/wasm/circularity_artifact/
+- "schema -rust -go"
+- which compiles to the files in  
+thesis/wasp/contracts/wasm/circularity_artifact/pkg  
+

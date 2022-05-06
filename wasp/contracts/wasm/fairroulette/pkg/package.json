@@ -1,0 +1,22 @@
+{
+  "name": "fairroulette",
+  "collaborators": [
+    "Eric Hop <eric@iota.org>"
+  ],
+  "description": "Fair roulette gambling contract",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iotaledger/wasp"
+  },
+  "files": [
+    "fairroulette_bg.wasm",
+    "fairroulette.js",
+    "fairroulette_bg.js",
+    "fairroulette.d.ts"
+  ],
+  "module": "fairroulette.js",
+  "types": "fairroulette.d.ts",
+  "sideEffects": false
+}
