@@ -3,7 +3,7 @@ This is the permanent repository corresponding to the masterthesis "How Distribu
 
 ## Scope:
 Most of the repository contains required software from the Iota repository https://github.com/iotaledger/wasp - "develop" branch  
-My own work consists of  
+My own work consists of the development of the smart contract "circularity_artifact" and the related testcases  
 thesis/wasp/contracts/wasm/circularity_artifact/schema.yaml  
 thesis/wasp/contracts/wasm/circularity_artifact/src/circularity_artifact.rs  
 thesis/wasp/contracts/wasm/circularity_artifact/test/circularity_artifact_test.go  
