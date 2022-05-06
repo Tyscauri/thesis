@@ -1,0 +1,166 @@
+name: circularity_artifact
+description: circularity_artifact description
+events: {}
+structs:
+  ProductPass:
+    id: Hash
+    did: String //merged did:iota:id
+    name: String
+    issuer: AgentID //packaging producer
+    version: Uint8
+    purpose: String    //e.g. food, hygiene, others
+    packagesNumber: Uint64
+    packageWeight: Uint64
+    chargeWeight: Uint64
+    packagesSorted: Uint64
+    packagesWrongSorted: Uint64
+    amountPerCharge: Uint64
+    remainingAmountPerCharge: Uint64
+    rewardPerPackageProducer: Uint64
+    rewardPerPackageRecycler: Uint64
+    activationDate: Uint64
+    expiryDate: Uint64
+  Composition:
+    material: String
+    mass: Uint64
+  Fraction:
+    fracId: Hash
+    did: String
+    name: String
+    purpose: String
+    pure: Bool
+    issuer: AgentID
+    amount: Uint64
+  FracComposition:
+    material: String
+    mass: Uint64 //in mg
+  Recyclate:
+    recyId: Hash
+    did: String
+    name: String
+    purpose: String
+    pure: Bool
+    issuer: AgentID
+    fracId: Hash
+  RecyComposition:
+    material: String
+    mass: Uint64 //in mg
+typedefs:
+  Compositions: Composition[]
+  FracCompositions: FracComposition[]
+  RecyCompositions: RecyComposition[]
+state:
+  owner: AgentID // current owner of this smart contract
+  productpasses: map[Hash]ProductPass
+  compositions: map[Hash]Compositions
+  shareRecycler: Uint8
+  pricePerMg: Uint64
+  fractions: map[Hash]Fraction
+  fracCompositions: map[Hash]FracCompositions
+  recyclates: map[Hash]Recyclate
+  recyCompositions: map[Hash]RecyCompositions
+  donationAddress: AgentID
+  tokenToDonate: Uint64
+  sorters: AgentID[]
+  recyclers: AgentID[]
+  producersBalances: map[AgentID]Uint64
+  recyclersBalances: map[AgentID]Uint64
+funcs:
+  init:
+    params:
+      owner: AgentID? // optional owner of this smart contract
+  createPP:
+    params: 
+      name: String
+      purpose: String
+      packagesNumber: Uint64
+      packageWeight: Uint64
+      expiryDate: Uint64
+      compositions: Compositions 
+    results:
+      id: Hash
+  setOwner:
+    access: owner // current owner of this smart contract
+    params:
+      owner: AgentID // new owner of this smart contract
+  setDonationAddress:
+    access: owner
+    params: 
+      donationAddress: AgentID
+  createFraction:
+    params:
+      name: String?
+      purpose: String
+    results:
+      fracID: Hash
+  addPPToFraction:
+    params:
+      ppID: Hash
+      fracID: Hash
+    results:
+      pp: ProductPass
+      fracID: Hash
+  createRecyclate:
+    params:
+      fracID: Hash
+      name: String?
+    results:
+      fraction: Fraction
+      recyID: Hash
+  payoutProducer:
+    params:
+      prodID: AgentID
+  deletePP:
+    params:
+      ppID: Hash
+    results:
+      pp: ProductPass
+  addSorter:
+    access: owner
+    params:
+      sorterID: AgentID
+  addRecycler:
+    access: owner
+    params:
+      recyclerID: AgentID
+  payoutDonation:
+views:
+  getPP:
+    params: 
+      id: Hash
+    results: 
+      ppresult: ProductPass
+      ppname: String
+  getMaterials:
+    params:
+      id: Hash
+    results:
+      compositions: Compositions
+  getFraction:
+    params:
+      fracID: Hash
+    results:
+      fraction: Fraction
+      fracComposition: FracCompositions
+  getRecyclate:
+    params:
+      recyID: Hash
+    results:
+      recyclate: Recyclate
+      recyComposition: RecyCompositions
+  getOwner:
+    results:
+      owner: AgentID // current owner of this smart contract
+  getAmountOfRequiredFunds:
+    params: 
+      chargeWeight: Uint64
+    results:
+      tokenRequired: Uint64
+  getTokenPerPackage:
+    params:
+      prodPass: ProductPass
+    results: 
+      tokenPerPackage: Uint64
+  getDonationAddress:
+    results:
+      donationAddress: AgentID
